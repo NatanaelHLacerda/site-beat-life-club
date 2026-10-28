@@ -56,6 +56,7 @@
     if (passo === 1) {
       if (valor('cnpj') && !cnpjValido(valor('cnpj'))) erros.cnpj = 'CNPJ inválido.';
       if (!valor('site') && !valor('instagram')) erros.instagram = 'Informe o site ou o Instagram.';
+      if (valor('segmento') === 'outro' && !valor('segmento_outro')) erros.segmento_outro = 'Preencha este campo.';
     }
     if (passo === 2 && valor('contato_email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor('contato_email'))) erros.contato_email = 'E-mail inválido.';
     if (passo === 3 && !marcados('busca').length) erros.busca = 'Escolha pelo menos uma opção.';
@@ -92,8 +93,8 @@
 
   function dados() {
     var f = {};
-    ['cnpj', 'razao_social', 'marca', 'cidade', 'uf', 'segmento', 'site', 'instagram', 'tempo_atuacao', 'faixa_faturamento',
-      'faixa_funcionarios', 'unidades', 'contato_nome', 'contato_cargo', 'contato_whatsapp', 'contato_email', 'quem_decide',
+    ['cnpj', 'razao_social', 'marca', 'cidade', 'uf', 'segmento', 'segmento_outro', 'site', 'instagram', 'tempo_atuacao', 'faixa_faturamento',
+      'faixa_funcionarios', 'unidades', 'contato_nome', 'contato_cargo', 'contato_whatsapp', 'contato_email', 'quem_decide', 'quem_decide_outro',
       'motivo_parceria', 'objetivo', 'publico', 'parcerias_anteriores', 'inicio_desejado', 'duracao', 'datas_interesse',
       'indicado_por', 'site_empresa_confirmacao'].forEach(function (n) { f[n] = valor(n); });
     f.cnpj = f.cnpj.replace(/\D/g, '');
@@ -124,11 +125,29 @@
     });
   }
 
+  var campoSegmentoOutro = d.getElementById('campo-segmento_outro');
+  var campoQuemDecideOutro = d.getElementById('campo-quem_decide_outro');
+  function atualizarCondicionais() {
+    if (campoSegmentoOutro) {
+      var mostrarSeg = valor('segmento') === 'outro';
+      campoSegmentoOutro.hidden = !mostrarSeg;
+      if (!mostrarSeg) { form.elements.segmento_outro.value = ''; marcarErro('segmento_outro', ''); }
+    }
+    if (campoQuemDecideOutro) {
+      var mostrarQD = valor('quem_decide') === 'outra pessoa';
+      campoQuemDecideOutro.hidden = !mostrarQD;
+      if (!mostrarQD) { form.elements.quem_decide_outro.value = ''; marcarErro('quem_decide_outro', ''); }
+    }
+  }
+  form.elements.segmento.addEventListener('change', atualizarCondicionais);
+  form.elements.quem_decide.addEventListener('change', atualizarCondicionais);
+
   function abrir(ev) {
     if (ev) ev.preventDefault();
     origem = d.activeElement;
     /* depois de um envio, a próxima abertura começa uma ficha nova */
     if (!ok.hidden) { form.reset(); form.hidden = false; ok.hidden = true; atualizarConta(); irPara(1); }
+    atualizarCondicionais();
     aberta = Date.now();
     d.documentElement.classList.add('ficha-aberta');
     dialog.showModal();
