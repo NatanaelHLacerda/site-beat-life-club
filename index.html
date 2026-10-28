@@ -382,8 +382,6 @@
   </div>
 </footer>
 
-
-
 <!-- FICHA DE PARCERIA: envia ao CRM de Parcerias (funil, etapa "Empresa recebida") -->
 <dialog class="ficha" id="ficha" aria-labelledby="ficha-titulo">
   <div class="ficha-caixa">
@@ -397,7 +395,132 @@
     <form class="ficha-form" id="ficha-form" novalidate>
       <ol class="ficha-etapas" aria-label="Etapas da ficha"><li data-passo="1"><span>Empresa</span></li><li data-passo="2"><span>Responsável</span></li><li data-passo="3"><span>Parceria</span></li><li data-passo="4"><span>Envio</span></li></ol>
       <p class="ficha-contador" aria-live="polite">Etapa <b data-atual>1</b> de 4 · <span data-titulo>Sobre a empresa</span></p>
-      <div class="ficha-corpo"><fieldset class="ficha-passo" data-passo="1"><legend class="sr">Sobre a empresa</legend><div class="ficha-grade"><div class="field" data-campo="cnpj"><label for="fi-cnpj">CNPJ</label><input id="fi-cnpj" name="cnpj" type="text" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><span class="err" id="e-cnpj"></span></div><div class="field" data-campo="razao_social"><label for="fi-razao_social">Razão social</label><input id="fi-razao_social" name="razao_social" type="text" autocomplete="organization"><span class="err" id="e-razao_social"></span></div><div class="field" data-campo="marca"><label for="fi-marca">Nome da marca</label><input id="fi-marca" name="marca" type="text" ><span class="ajuda" id="a-marca">Como a marca é conhecida pelo público.</span><span class="err" id="e-marca"></span></div><div class="field" data-campo="segmento"><label for="fi-segmento">Segmento de atuação</label><select id="fi-segmento" name="segmento"><option value="">Escolha uma opção</option><option>saúde e bem-estar</option><option>nutrição e alimentação</option><option>beleza e estética</option><option>moda e acessórios</option><option>tecnologia</option><option>mobilidade e automotivo</option><option>imobiliário e construção</option><option>serviços financeiros</option><option>cultura e experiências</option><option>indústria</option><option>outro</option></select><span class="err" id="e-segmento"></span></div><div class="field" data-campo="cidade"><label for="fi-cidade">Cidade</label><input id="fi-cidade" name="cidade" type="text" autocomplete="address-level2"><span class="err" id="e-cidade"></span></div><div class="field" data-campo="uf"><label for="fi-uf">Estado</label><select id="fi-uf" name="uf"><option value="">UF</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select><span class="err" id="e-uf"></span></div><div class="field" data-campo="site"><label for="fi-site">Site (opcional)</label><input id="fi-site" name="site" type="url" placeholder="https://"><span class="err" id="e-site"></span></div><div class="field" data-campo="instagram"><label for="fi-instagram">Instagram (opcional)</label><input id="fi-instagram" name="instagram" type="text" placeholder="@suamarca"><span class="ajuda" id="a-instagram">Informe pelo menos um: site ou Instagram.</span><span class="err" id="e-instagram"></span></div><div class="field" data-campo="tempo_atuacao"><label for="fi-tempo_atuacao">Tempo de atuação (anos)</label><select id="fi-tempo_atuacao" name="tempo_atuacao"><option value="">Escolha uma opção</option><option>menos de 1</option><option>1 a 3</option><option>3 a 10</option><option>mais de 10</option></select><span class="err" id="e-tempo_atuacao"></span></div><div class="field" data-campo="faixa_funcionarios"><label for="fi-faixa_funcionarios">Número de funcionários</label><select id="fi-faixa_funcionarios" name="faixa_funcionarios"><option value="">Escolha uma opção</option><option>até 9</option><option>10 a 49</option><option>50 a 99</option><option>100 a 499</option><option>500 ou mais</option></select><span class="err" id="e-faixa_funcionarios"></span></div><div class="field" data-campo="faixa_faturamento"><label for="fi-faixa_faturamento">Faturamento anual aproximado</label><select id="fi-faixa_faturamento" name="faixa_faturamento"><option value="">Escolha uma opção</option><option>até R$ 360 mil</option><option>R$ 360 mil a R$ 4,8 mi</option><option>R$ 4,8 mi a R$ 90 mi</option><option>R$ 90 mi a R$ 300 mi</option><option>acima de R$ 300 mi</option><option>prefiro informar na reunião</option></select><span class="err" id="e-faixa_faturamento"></span></div><div class="field" data-campo="unidades"><label for="fi-unidades">Unidades ou lojas (opcional)</label><input id="fi-unidades" name="unidades" type="number" min="0" inputmode="numeric"><span class="err" id="e-unidades"></span></div></div></fieldset><fieldset class="ficha-passo" data-passo="2" hidden><legend class="sr">Quem é o responsável</legend><div class="ficha-grade"><div class="field" data-campo="contato_nome"><label for="fi-contato_nome">Nome completo</label><input id="fi-contato_nome" name="contato_nome" type="text" autocomplete="name"><span class="err" id="e-contato_nome"></span></div><div class="field" data-campo="contato_cargo"><label for="fi-contato_cargo">Cargo</label><input id="fi-contato_cargo" name="contato_cargo" type="text" autocomplete="organization-title"><span class="err" id="e-contato_cargo"></span></div><div class="field" data-campo="contato_whatsapp"><label for="fi-contato_whatsapp">WhatsApp</label><input id="fi-contato_whatsapp" name="contato_whatsapp" type="tel" autocomplete="tel" placeholder="(31) 90000-0000"><span class="err" id="e-contato_whatsapp"></span></div><div class="field" data-campo="contato_email"><label for="fi-contato_email">E-mail</label><input id="fi-contato_email" name="contato_email" type="email" autocomplete="email"><span class="err" id="e-contato_email"></span></div><div class="field largo" data-campo="quem_decide"><label for="fi-quem_decide">Quem decide a parceria na empresa (opcional)</label><select id="fi-quem_decide" name="quem_decide"><option value="">Escolha uma opção</option><option>eu mesmo</option><option>outra pessoa</option></select><span class="err" id="e-quem_decide"></span></div></div></fieldset><fieldset class="ficha-passo" data-passo="3" hidden><legend class="sr">Sobre a parceria</legend><div class="ficha-grade"><div class="field largo" data-campo="busca"><fieldset><legend>O que a marca busca</legend><div class="opts"><label class="opt"><input type="checkbox" name="busca" value="telas do Club"><span>telas do Club</span></label><label class="opt"><input type="checkbox" name="busca" value="ativações dentro do Club"><span>ativações dentro do Club</span></label><label class="opt"><input type="checkbox" name="busca" value="eventos"><span>eventos</span></label><label class="opt"><input type="checkbox" name="busca" value="conteúdo e redes sociais"><span>conteúdo e redes sociais</span></label><label class="opt"><input type="checkbox" name="busca" value="presença de marca"><span>presença de marca</span></label><label class="opt"><input type="checkbox" name="busca" value="troca de serviços"><span>troca de serviços</span></label><label class="opt"><input type="checkbox" name="busca" value="patrocínio"><span>patrocínio</span></label><label class="opt"><input type="checkbox" name="busca" value="outro"><span>outro</span></label></div></fieldset><span class="err" id="e-busca"></span></div><div class="field largo" data-campo="motivo_parceria"><label for="fi-motivo_parceria">Por que buscam a parceria com a Beat</label><textarea id="fi-motivo_parceria" name="motivo_parceria" maxlength="800"></textarea><span class="ajuda" id="a-motivo_parceria"><span data-conta>0</span>/800</span><span class="err" id="e-motivo_parceria"></span></div><div class="field" data-campo="objetivo"><label for="fi-objetivo">Objetivo principal</label><select id="fi-objetivo" name="objetivo"><option value="">Escolha uma opção</option><option>dar a conhecer a marca</option><option>gerar vendas ou contatos</option><option>lançar um produto</option><option>criar relacionamento com público de alto padrão</option><option>oferecer uma experiência</option><option>outro</option></select><span class="err" id="e-objetivo"></span></div><div class="field" data-campo="publico"><label for="fi-publico">Quem é o público da marca</label><input id="fi-publico" name="publico" type="text" ><span class="err" id="e-publico"></span></div><div class="field largo" data-campo="parcerias_anteriores"><label for="fi-parcerias_anteriores">Já fizeram parcerias ou patrocínios parecidos? Quais? (opcional)</label><textarea id="fi-parcerias_anteriores" name="parcerias_anteriores" ></textarea><span class="err" id="e-parcerias_anteriores"></span></div><div class="field" data-campo="inicio_desejado"><label for="fi-inicio_desejado">Quando querem começar (opcional)</label><input id="fi-inicio_desejado" name="inicio_desejado" type="text" placeholder="ex.: março de 2027"><span class="err" id="e-inicio_desejado"></span></div><div class="field" data-campo="duracao"><label for="fi-duracao">Duração pretendida (opcional)</label><select id="fi-duracao" name="duracao"><option value="">Escolha uma opção</option><option>piloto curto</option><option>6 meses</option><option>12 meses</option><option>mais de 12 meses</option></select><span class="err" id="e-duracao"></span></div><div class="field" data-campo="datas_interesse"><label for="fi-datas_interesse">Datas de interesse (opcional)</label><input id="fi-datas_interesse" name="datas_interesse" type="text" ><span class="err" id="e-datas_interesse"></span></div><div class="field" data-campo="indicado_por"><label for="fi-indicado_por">Foram indicados por alguém? Quem? (opcional)</label><input id="fi-indicado_por" name="indicado_por" type="text" ><span class="err" id="e-indicado_por"></span></div></div></fieldset><fieldset class="ficha-passo" data-passo="4" hidden><legend class="sr">Envio</legend><div class="ficha-grade"><p class="muted">Confira os dois pontos abaixo para enviar. Depois do envio, o time de parcerias responde em até 1 dia útil.</p><div class="field largo" data-campo="aceite_nao_proposta"><label class="marca-check"><input type="checkbox" name="aceite_nao_proposta"><span>Entendo que o envio não é uma proposta.</span></label><span class="err" id="e-aceite_nao_proposta"></span></div><div class="field largo" data-campo="consentimento"><label class="marca-check"><input type="checkbox" name="consentimento"><span>Autorizo a The Beat Life Club a usar as informações enviadas para avaliar a parceria e entrar em contato comigo. Meus dados não serão compartilhados com terceiros. Li a <a href="https://club-beat-alpha.vercel.app/seja-parceiro/privacidade" target="_blank" rel="noopener">política de privacidade</a>.</span></label><span class="err" id="e-consentimento"></span></div><label class="isca" aria-hidden="true">Não preencha<input name="site_empresa_confirmacao" tabindex="-1" autocomplete="off"></label></div></fieldset></div>
+      <div class="ficha-corpo">
+        <fieldset class="ficha-passo" data-passo="1">
+          <legend class="sr">Sobre a empresa</legend>
+          <div class="ficha-grade">
+            <div class="field" data-campo="cnpj"><label for="fi-cnpj">CNPJ</label><input id="fi-cnpj" name="cnpj" type="text" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00"><span class="err" id="e-cnpj"></span></div>
+            <div class="field" data-campo="razao_social"><label for="fi-razao_social">Razão social</label><input id="fi-razao_social" name="razao_social" type="text" autocomplete="organization"><span class="err" id="e-razao_social"></span></div>
+            <div class="field" data-campo="marca"><label for="fi-marca">Nome da marca</label><input id="fi-marca" name="marca" type="text"><span class="ajuda" id="a-marca">Como a marca é conhecida pelo público.</span><span class="err" id="e-marca"></span></div>
+            <div class="field" data-campo="segmento"><label for="fi-segmento">Segmento de atuação</label>
+              <select id="fi-segmento" name="segmento">
+                <option value="">Escolha uma opção</option>
+                <option>saúde e bem-estar</option><option>nutrição e alimentação</option><option>beleza e estética</option><option>moda e acessórios</option><option>tecnologia</option><option>mobilidade e automotivo</option><option>imobiliário e construção</option><option>serviços financeiros</option><option>cultura e experiências</option><option>indústria</option><option>outro</option>
+              </select>
+              <span class="err" id="e-segmento"></span>
+            </div>
+            <!-- NOVO: aparece quando "outro" é selecionado em Segmento -->
+            <div class="field" data-campo="segmento_outro" id="campo-segmento_outro" hidden>
+              <label for="fi-segmento_outro">Qual segmento?</label>
+              <input id="fi-segmento_outro" name="segmento_outro" type="text">
+              <span class="err" id="e-segmento_outro"></span>
+            </div>
+            <div class="field" data-campo="cidade"><label for="fi-cidade">Cidade</label><input id="fi-cidade" name="cidade" type="text" autocomplete="address-level2"><span class="err" id="e-cidade"></span></div>
+            <div class="field" data-campo="uf"><label for="fi-uf">Estado</label>
+              <select id="fi-uf" name="uf">
+                <option value="">UF</option>
+                <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+              </select>
+              <span class="err" id="e-uf"></span>
+            </div>
+            <div class="field" data-campo="site"><label for="fi-site">Site (opcional)</label><input id="fi-site" name="site" type="url" placeholder="https://"><span class="err" id="e-site"></span></div>
+            <div class="field" data-campo="instagram"><label for="fi-instagram">Instagram (opcional)</label><input id="fi-instagram" name="instagram" type="text" placeholder="@suamarca"><span class="ajuda" id="a-instagram">Informe pelo menos um: site ou Instagram.</span><span class="err" id="e-instagram"></span></div>
+            <div class="field" data-campo="tempo_atuacao"><label for="fi-tempo_atuacao">Tempo de atuação (anos)</label>
+              <select id="fi-tempo_atuacao" name="tempo_atuacao">
+                <option value="">Escolha uma opção</option><option>menos de 1</option><option>1 a 3</option><option>3 a 10</option><option>mais de 10</option>
+              </select>
+              <span class="err" id="e-tempo_atuacao"></span>
+            </div>
+            <div class="field" data-campo="faixa_funcionarios"><label for="fi-faixa_funcionarios">Número de funcionários</label>
+              <select id="fi-faixa_funcionarios" name="faixa_funcionarios">
+                <option value="">Escolha uma opção</option><option>até 9</option><option>10 a 49</option><option>50 a 99</option><option>100 a 499</option><option>500 ou mais</option>
+              </select>
+              <span class="err" id="e-faixa_funcionarios"></span>
+            </div>
+            <div class="field" data-campo="faixa_faturamento"><label for="fi-faixa_faturamento">Faturamento anual aproximado</label>
+              <select id="fi-faixa_faturamento" name="faixa_faturamento">
+                <option value="">Escolha uma opção</option><option>até R$ 360 mil</option><option>R$ 360 mil a R$ 4,8 mi</option><option>R$ 4,8 mi a R$ 90 mi</option><option>R$ 90 mi a R$ 300 mi</option><option>acima de R$ 300 mi</option><option>prefiro informar na reunião</option>
+              </select>
+              <span class="err" id="e-faixa_faturamento"></span>
+            </div>
+            <div class="field" data-campo="unidades"><label for="fi-unidades">Unidades ou lojas (opcional)</label><input id="fi-unidades" name="unidades" type="number" min="0" inputmode="numeric"><span class="err" id="e-unidades"></span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="ficha-passo" data-passo="2" hidden>
+          <legend class="sr">Quem é o responsável</legend>
+          <div class="ficha-grade">
+            <div class="field" data-campo="contato_nome"><label for="fi-contato_nome">Nome completo</label><input id="fi-contato_nome" name="contato_nome" type="text" autocomplete="name"><span class="err" id="e-contato_nome"></span></div>
+            <div class="field" data-campo="contato_cargo"><label for="fi-contato_cargo">Cargo</label><input id="fi-contato_cargo" name="contato_cargo" type="text" autocomplete="organization-title"><span class="err" id="e-contato_cargo"></span></div>
+            <div class="field" data-campo="contato_whatsapp"><label for="fi-contato_whatsapp">WhatsApp</label><input id="fi-contato_whatsapp" name="contato_whatsapp" type="tel" autocomplete="tel" placeholder="(31) 90000-0000"><span class="err" id="e-contato_whatsapp"></span></div>
+            <div class="field" data-campo="contato_email"><label for="fi-contato_email">E-mail</label><input id="fi-contato_email" name="contato_email" type="email" autocomplete="email"><span class="err" id="e-contato_email"></span></div>
+            <div class="field largo" data-campo="quem_decide"><label for="fi-quem_decide">Quem decide a parceria na empresa (opcional)</label>
+              <select id="fi-quem_decide" name="quem_decide">
+                <option value="">Escolha uma opção</option><option>eu mesmo</option><option>outra pessoa</option>
+              </select>
+              <span class="err" id="e-quem_decide"></span>
+            </div>
+            <!-- NOVO: aparece quando "outra pessoa" é selecionado -->
+            <div class="field largo" data-campo="quem_decide_outro" id="campo-quem_decide_outro" hidden>
+              <label for="fi-quem_decide_outro">Quem é essa pessoa? (opcional)</label>
+              <input id="fi-quem_decide_outro" name="quem_decide_outro" type="text">
+              <span class="err" id="e-quem_decide_outro"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="ficha-passo" data-passo="3" hidden>
+          <legend class="sr">Sobre a parceria</legend>
+          <div class="ficha-grade">
+            <div class="field largo" data-campo="busca">
+              <fieldset>
+                <legend>O que a marca busca</legend>
+                <div class="opts">
+                  <label class="opt"><input type="checkbox" name="busca" value="telas do Club"><span>telas do Club</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="ativações dentro do Club"><span>ativações dentro do Club</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="eventos"><span>eventos</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="conteúdo e redes sociais"><span>conteúdo e redes sociais</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="presença de marca"><span>presença de marca</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="troca de serviços"><span>troca de serviços</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="patrocínio"><span>patrocínio</span></label>
+                  <label class="opt"><input type="checkbox" name="busca" value="outro"><span>outro</span></label>
+                </div>
+              </fieldset>
+              <span class="err" id="e-busca"></span>
+            </div>
+            <div class="field largo" data-campo="motivo_parceria"><label for="fi-motivo_parceria">Por que buscam a parceria com a Beat</label><textarea id="fi-motivo_parceria" name="motivo_parceria" maxlength="800"></textarea><span class="ajuda" id="a-motivo_parceria"><span data-conta>0</span>/800</span><span class="err" id="e-motivo_parceria"></span></div>
+            <div class="field" data-campo="objetivo"><label for="fi-objetivo">Objetivo principal</label>
+              <select id="fi-objetivo" name="objetivo">
+                <option value="">Escolha uma opção</option>
+                <option>Quero que conheçam minha marca</option>
+                <option>gerar vendas ou contatos</option><option>lançar um produto</option><option>criar relacionamento com público de alto padrão</option><option>oferecer uma experiência</option><option>outro</option>
+              </select>
+              <span class="err" id="e-objetivo"></span>
+            </div>
+            <div class="field" data-campo="publico"><label for="fi-publico">Quem é o público da marca</label><input id="fi-publico" name="publico" type="text"><span class="err" id="e-publico"></span></div>
+            <div class="field largo" data-campo="parcerias_anteriores"><label for="fi-parcerias_anteriores">Já fizeram parcerias ou patrocínios parecidos? Quais? (opcional)</label><textarea id="fi-parcerias_anteriores" name="parcerias_anteriores"></textarea><span class="err" id="e-parcerias_anteriores"></span></div>
+            <div class="field" data-campo="inicio_desejado"><label for="fi-inicio_desejado">Quando querem começar (opcional)</label><input id="fi-inicio_desejado" name="inicio_desejado" type="text" placeholder="ex.: março de 2027"><span class="err" id="e-inicio_desejado"></span></div>
+            <div class="field" data-campo="duracao"><label for="fi-duracao">Duração pretendida (opcional)</label>
+              <select id="fi-duracao" name="duracao">
+                <option value="">Escolha uma opção</option><option>piloto curto</option><option>6 meses</option><option>12 meses</option><option>mais de 12 meses</option>
+              </select>
+              <span class="err" id="e-duracao"></span>
+            </div>
+            <div class="field" data-campo="datas_interesse"><label for="fi-datas_interesse">Datas de interesse (opcional)</label><input id="fi-datas_interesse" name="datas_interesse" type="text"><span class="err" id="e-datas_interesse"></span></div>
+            <div class="field" data-campo="indicado_por"><label for="fi-indicado_por">Foram indicados por alguém? Quem? (opcional)</label><input id="fi-indicado_por" name="indicado_por" type="text"><span class="err" id="e-indicado_por"></span></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="ficha-passo" data-passo="4" hidden>
+          <legend class="sr">Envio</legend>
+          <div class="ficha-grade">
+            <p class="muted">Confira os dois pontos abaixo para enviar. Depois do envio, o time de parcerias responde em até 1 dia útil.</p>
+            <div class="field largo" data-campo="aceite_nao_proposta"><label class="marca-check"><input type="checkbox" name="aceite_nao_proposta"><span>Entendo que o envio não é uma proposta.</span></label><span class="err" id="e-aceite_nao_proposta"></span></div>
+            <div class="field largo" data-campo="consentimento"><label class="marca-check"><input type="checkbox" name="consentimento"><span>Autorizo a The Beat Life Club a usar as informações enviadas para avaliar a parceria e entrar em contato comigo. Meus dados não serão compartilhados com terceiros. Li a <a href="https://club-beat-alpha.vercel.app/seja-parceiro/privacidade" target="_blank" rel="noopener">política de privacidade</a>.</span></label><span class="err" id="e-consentimento"></span></div>
+            <label class="isca" aria-hidden="true">Não preencha<input name="site_empresa_confirmacao" tabindex="-1" autocomplete="off"></label>
+          </div>
+        </fieldset>
+      </div>
       <p class="ficha-erro" role="alert" hidden></p>
       <footer class="ficha-acoes">
         <button class="btn btn-ghost" type="button" data-voltar hidden>Voltar</button>
@@ -407,7 +530,8 @@
     <div class="ficha-ok" hidden>
       <img src="img/estrela-oceano.png" alt="" width="48" height="48">
       <h3>Ficha enviada.</h3>
-      <p class="lead">Recebemos a sua ficha. O time de parcerias responde em até 1 dia útil. Este envio ainda não é uma proposta.</p>
+      <!-- NOVO texto de sucesso -->
+      <p class="lead">Recebemos seu interesse, em ser nosso parceiro. O nosso time te responderá em até 1 dia útil. Este envio ainda não é uma proposta.</p>
       <div class="hero-actions">
         <button class="btn btn-primary" type="button" data-fechar>Voltar à página</button>
         <a class="btn btn-ghost" href="https://wa.me/5531994741012?text=Ol%C3%A1%2C%20acabei%20de%20enviar%20a%20ficha%20de%20parceria%20pela%20p%C3%A1gina%20da%20The%20Beat%20Life%20Club." target="_blank" rel="noopener">Falar no WhatsApp</a>
